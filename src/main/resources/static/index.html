@@ -8,5 +8,37 @@
     Welcome to LZY Homepage!
     Changed Man
     this is in static directory
+
+    <script type="text/javascript">
+        // 创建Web Socket对象
+        var webSocket = new WebSocket("ws://localhost:8080/chat-room/lzy");
+        var i = 0;
+        // 当WebSocket建立网络连接时激发该函数
+        webSocket.onopen= function()
+        {
+            // 发送消息
+            webSocket.send("我是疯狂软件教育中心");
+        }
+
+//
+//        webSocket.send("call me 2");
+//        webSocket.send("call me 3");
+
+        // 为onmessage事件绑定监听器，接收消息
+        webSocket.onmessage= function(event)
+        {
+            // 接收消息
+            alert("收到的消息是：" + event.data);
+
+            if (i < 3) {
+                webSocket.send(event.data + '' + i++);
+            }
+        }
+    </script>
+
 </body>
+
+
+
+
 </html>
