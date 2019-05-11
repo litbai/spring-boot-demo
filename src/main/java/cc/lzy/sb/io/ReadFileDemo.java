@@ -76,5 +76,7 @@ public class ReadFileDemo {
         public void setImage(String image) {
             this.image = image;
         }
+        System.out.println("line 1: This is branch feature/merged");
+        System.out.println("line 2: This is branch feature/merged");
     }
 }
