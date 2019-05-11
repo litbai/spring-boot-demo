@@ -1,0 +1,5 @@
+This is git hash-object -w
+
+THis is line 3.
+
+this is add
