@@ -3,3 +3,7 @@ This is git hash-object -w
 THis is line 3.
 
 this is add
+
+this is add 2
+
+this is add 3
